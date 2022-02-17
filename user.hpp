@@ -1,4 +1,4 @@
-#include <String>
+#include <string>
 #include <vector>
 #include <algorithm>
 #include "bear.cpp"
@@ -8,28 +8,28 @@ using namespace std;
 class User {
 public:
 
-	vector<String> locations;
-	vector<String> messages;
+	vector<string> locations;
+	vector<string> messages;
 	
 	User();
-	User(String username, int socket);
+	User(string username, int socket);
 
 	int getSocket() {return socket;}
-	String getUsername() {return username;}
-	String getLocation(int index);
-	String getMessage(int index);
+	string getUsername() {return username;}
+	string getLocation(int index);
+	string getMessage(int index);
 
-	void setUsername(String username);
+	void setUsername(string username);
 	void setSocket(int socket);
 
-	void addLocation(String location);
-	void removeLocation(String location);
+	void addLocation(string location);
+	void removeLocation(string location);
 
-	void addMessage(String message);
-	void removeMessage(String message);
+	void addMessage(string message);
+	void removeMessage(string message);
 
-	void printList(vector<String> list);
+	void printList(vector<string> list);
 private:
 	int socket;
-	String username;
+	string username;
 };
