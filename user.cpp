@@ -3,65 +3,65 @@
 User(){
 }
 
-User(String username, int socket){
+User(string username, int socket){
 	this.username = username;
 	this.socket = socket;
 }
 
-String getLocation(int index){
+string getLocation(int index){
 	if(!(index >= this.locations.size()))
 		return this.locations.at(index);
 	return "[-] INVALID INDEX FOR getLocation(int index)\n";
 }
 
-String getMessage(int index){
+string getMessage(int index){
 	if(!(index >= this.messages.size()))
 		return this.messages.at(index);
 	return "[-] INVALID INDEX FOR getMessage(int index)\n";
 }
 
-void setUsername(String username){
+void setUsername(string username){
 	//NO FUNCTIONALITY FOR NOW
 }
 void setSocket(int socket){
 	//NO FUNCTIONALITY FOR NOW
 }
 
-void addLocation(String location){
+void addLocation(string location){
 	if(count(this.locations.begin(), this.locations.end(), location))
 		return;
 	this.locations.push_back(location);
 	return;
 }
-void removeLocation(String location){
+void removeLocation(string location){
 	for(int i = 0; i < this.locations.size(), i++){
 		if(location == this.locations.at(i)){
 			this.locations.erase(i);
 			return;
 		}
-		printf("vector<String> location does not contain %s\n", location);
+		printf("vector<string> location does not contain %s\n", location);
 		return;
 	}
 }
 
-void addMessage(String message){
+void addMessage(string message){
 	if(count(this.messages.begin(), this.messages.end(), message))
 		return;
 	this.messages.push_back(message);
 	return;
 }
-void removeMessage(String message){
+void removeMessage(string message){
 	for(int i = 0; i < this.messages.size(), i++){
 		if(message == this.messages.at(i)){
 			this.messages.erase(i);
 			return;
 		}
-		printf("vector<String> message does not contain %s\n", message);
+		printf("vector<string> message does not contain %s\n", message);
 		return;
 	}
 }
 
-void printList(vector<String> list){
+void printList(vector<string> list){
 	for(int i = 0; i < list.size(); i++){
 		printf("Index %d: %s\n", i, list.at(i));
 	}
