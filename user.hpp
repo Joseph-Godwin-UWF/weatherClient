@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include "bear.cpp"
 
 using namespace std;
 
@@ -10,7 +9,7 @@ public:
 
 	vector<string> locations;
 	vector<string> messages;
-	
+
 	User();
 	User(string username, int socket);
 
