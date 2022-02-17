@@ -10,7 +10,6 @@ public:
 	vector<string> locations;
 	vector<string> messages;
 
-	User();
 	User(string username, int socket);
 
 	int getSocket() {return socket;}

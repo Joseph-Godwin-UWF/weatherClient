@@ -1,39 +1,36 @@
 #include "user.hpp"
 
-User(){
-}
-
-User(string username, int socket){
+User::User(string username, int socket){
 	this.username = username;
 	this.socket = socket;
 }
 
-string getLocation(int index){
+string User::getLocation(int index){
 	if(!(index >= this.locations.size()))
 		return this.locations.at(index);
 	return "[-] INVALID INDEX FOR getLocation(int index)\n";
 }
 
-string getMessage(int index){
+string User::getMessage(int index){
 	if(!(index >= this.messages.size()))
 		return this.messages.at(index);
 	return "[-] INVALID INDEX FOR getMessage(int index)\n";
 }
 
-void setUsername(string username){
+void User::setUsername(string username){
 	//NO FUNCTIONALITY FOR NOW
 }
-void setSocket(int socket){
+void User::setSocket(int socket){
 	//NO FUNCTIONALITY FOR NOW
 }
 
-void addLocation(string location){
+void User::addLocation(string location){
 	if(count(this.locations.begin(), this.locations.end(), location))
 		return;
 	this.locations.push_back(location);
 	return;
 }
-void removeLocation(string location){
+void User::removeLocation(string location){
 	for(int i = 0; i < this.locations.size(), i++){
 		if(location == this.locations.at(i)){
 			this.locations.erase(i);
@@ -44,13 +41,13 @@ void removeLocation(string location){
 	}
 }
 
-void addMessage(string message){
+void User::addMessage(string message){
 	if(count(this.messages.begin(), this.messages.end(), message))
 		return;
 	this.messages.push_back(message);
 	return;
 }
-void removeMessage(string message){
+void User::removeMessage(string message){
 	for(int i = 0; i < this.messages.size(), i++){
 		if(message == this.messages.at(i)){
 			this.messages.erase(i);
@@ -61,7 +58,7 @@ void removeMessage(string message){
 	}
 }
 
-void printList(vector<string> list){
+void User::printList(vector<string> list){
 	for(int i = 0; i < list.size(); i++){
 		printf("Index %d: %s\n", i, list.at(i));
 	}
