@@ -31,12 +31,11 @@ void User::addLocation(string location){
 	return;
 }
 void User::removeLocation(string location){
-	for(int i = 0; i < this->locations.size(), i++){
+	for(int i = 0; i < this->locations.size(); i++){
 		if(location == this->locations.at(i)){
 			this->locations.erase(i);
 			return;
 		}
-		printf("vector<string> location does not contain %s\n", location);
 		return;
 	}
 }
@@ -53,7 +52,6 @@ void User::removeMessage(string message){
 			this->messages.erase(i);
 			return;
 		}
-		printf("vector<string> message does not contain %s\n", message);
 		return;
 	}
 }
